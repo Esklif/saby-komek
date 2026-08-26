@@ -44,12 +44,12 @@ export default function Home() {
       <section className="container mx-auto px-4 md:px-6">
         <h2 className="text-2xl font-bold mb-6">Категории помощи</h2>
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          <CategoryCard icon={<Baby />} label="Дети" color="bg-emerald-100 text-emerald-700" />
-          <CategoryCard icon={<Stethoscope />} label="Здоровье" color="bg-rose-100 text-rose-700" />
-          <CategoryCard icon={<GraduationCap />} label="Образование" color="bg-amber-100 text-amber-700" />
-          <CategoryCard icon={<Users />} label="Люди в трудной ситуации" color="bg-purple-100 text-purple-700" />
-          <CategoryCard icon={<Accessibility />} label="Особые потребности" color="bg-blue-100 text-blue-700" />
-          <CategoryCard icon={<Building />} label="Помощь соц учреждениям" color="bg-indigo-100 text-indigo-700" />
+          <CategoryCard icon={<Baby className="w-8 h-8" />} label="Дети" color="bg-emerald-100 text-emerald-700" />
+          <CategoryCard icon={<Stethoscope className="w-8 h-8" />} label="Здоровье" color="bg-rose-100 text-rose-700" />
+          <CategoryCard icon={<GraduationCap className="w-8 h-8" />} label="Образование" color="bg-amber-100 text-amber-700" />
+          <CategoryCard icon={<Users className="w-8 h-8" />} label="Люди в трудной ситуации" color="bg-purple-100 text-purple-700" />
+          <CategoryCard icon={<Accessibility className="w-8 h-8" />} label="Особые потребности" color="bg-blue-100 text-blue-700" />
+          <CategoryCard icon={<Building className="w-8 h-8" />} label="Помощь соц учреждениям" color="bg-indigo-100 text-indigo-700" />
         </div>
       </section>
 
@@ -132,7 +132,7 @@ function CategoryCard({ icon, label, color }: { icon: React.ReactNode, label: st
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow gap-4 cursor-pointer text-center">
       <div className={`w-16 h-16 rounded-full flex items-center justify-center ${color}`}>
-        {React.cloneElement(icon as React.ReactElement, { className: "w-8 h-8" })}
+        {icon}
       </div>
       <span className="font-semibold text-sm">{label}</span>
     </div>
